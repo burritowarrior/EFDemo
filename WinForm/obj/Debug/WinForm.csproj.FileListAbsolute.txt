@@ -1,0 +1,17 @@
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\WinForm.exe.config
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\WinForm.exe
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\WinForm.pdb
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\EntityFramework.dll
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\EntityFramework.xml
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.csprojResolveAssemblyReference.cache
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.Form1.resources
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.Properties.Resources.resources
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.csproj.GenerateResource.Cache
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.exe
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.pdb
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.Form2.resources
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\AutoMapper.dll
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\bin\Debug\AutoMapper.xml
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.Form3.resources
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.MainForm2.resources
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.ThreadForm.resources
