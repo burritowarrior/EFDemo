@@ -87,6 +87,13 @@
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
     <Compile Include="Employee.cs" />
+    <Compile Include="EmployeeDTO.cs" />
+    <Compile Include="EmployeeReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmployeeReport.Designer.cs">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="film.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
@@ -200,6 +207,9 @@
     <Compile Include="ThreadForm.Designer.cs">
       <DependentUpon>ThreadForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="EmployeeReport.resx">
+      <DependentUpon>EmployeeReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

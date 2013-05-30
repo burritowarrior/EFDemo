@@ -66,5 +66,11 @@ namespace WinForm
             ShowTime showTime = new ShowTime();
             showTime.ShowDialog();
         }
+
+        private void sampleReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EmployeeReport employeeReport = new EmployeeReport();
+            employeeReport.ShowDialog();
+        }
     }
 }
