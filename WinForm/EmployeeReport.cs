@@ -36,7 +36,8 @@ namespace WinForm
                     label3.Text = string.Format("There are {0:#,#} rows", itemCount);
                 };
 
-            backgroundWorker.RunWorkerAsync();    
+            backgroundWorker.RunWorkerAsync();
+            this.reportViewer1.RefreshReport();
         }
 
         private int ReadFile()
