@@ -54,5 +54,17 @@ namespace WinForm
             ThreadForm threadForm = new ThreadForm();
             threadForm.ShowDialog();
         }
+
+        private void testHarnessToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TestHarness testHarness = new TestHarness();
+            testHarness.ShowDialog();
+        }
+
+        private void showTimeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowTime showTime = new ShowTime();
+            showTime.ShowDialog();
+        }
     }
 }

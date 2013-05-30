@@ -64,6 +64,9 @@
     <Compile Include="address.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
+    <Compile Include="AutoCompleteComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="category.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
@@ -74,6 +77,9 @@
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
     <Compile Include="CountryDTO.cs" />
+    <Compile Include="CustomAutoCompleteTextbox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="customer.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
@@ -165,6 +171,12 @@
     <Compile Include="sales_by_film_category.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
+    <Compile Include="ShowTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowTime.Designer.cs">
+      <DependentUpon>ShowTime.cs</DependentUpon>
+    </Compile>
     <Compile Include="SqlMapper.cs" />
     <Compile Include="staff.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
@@ -176,6 +188,12 @@
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
     <Compile Include="Student.cs" />
+    <Compile Include="TestHarness.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TestHarness.Designer.cs">
+      <DependentUpon>TestHarness.cs</DependentUpon>
+    </Compile>
     <Compile Include="ThreadForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -203,6 +221,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TestHarness.resx">
+      <DependentUpon>TestHarness.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ThreadForm.resx">
       <DependentUpon>ThreadForm.cs</DependentUpon>
     </EmbeddedResource>
