@@ -17,3 +17,5 @@ D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.MainForm2.resources
 D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.ThreadForm.resources
 D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.TestHarness.resources
 D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\WinForm.EmployeeReport.resources
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\RdlCompile.cache
+D:\DEVELOPMENT\Prototypes\EFDemo\WinForm\obj\Debug\RdlCompile.compiled

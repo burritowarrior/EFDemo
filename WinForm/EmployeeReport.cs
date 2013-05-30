@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.IO;
 using System.Windows.Forms;
+using Microsoft.Reporting.WinForms;
 
 namespace WinForm
 {
@@ -34,10 +35,22 @@ namespace WinForm
                     var itemCount = (int) args.Result;
                     label2.Text = string.Format("Ended load operation at: {0:hh:mm:ss tt}", DateTime.Now);
                     label3.Text = string.Format("There are {0:#,#} rows", itemCount);
+
+                    BuildReport();
                 };
 
             backgroundWorker.RunWorkerAsync();
-            this.reportViewer1.RefreshReport();
+        }
+
+        private void BuildReport()
+        {
+            var reportDataSource = new ReportDataSource("EmployeeDataset", employeeDtos);
+            reportViewer1.LocalReport.DataSources.Add(reportDataSource);
+            reportViewer1.LocalReport.ReportPath = @"..\..\EmployeeData.rdlc";
+
+            reportViewer1.LocalReport.SetParameters(new ReportParameter("reportName", "Parameter"));
+
+            reportViewer1.RefreshReport();
         }
 
         private int ReadFile()
