@@ -12,18 +12,17 @@ namespace WinForm
     using System;
     using System.Collections.Generic;
     
-    public partial class actor
+    public partial class contact
     {
-        public actor()
+        public contact()
         {
-            this.film_actor = new HashSet<film_actor>();
+            this.friends = new HashSet<friend>();
         }
     
-        public int actor_id { get; set; }
-        public string first_name { get; set; }
-        public string last_name { get; set; }
-        public System.DateTime last_update { get; set; }
+        public int ContactID { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
     
-        public virtual ICollection<film_actor> film_actor { get; set; }
+        public virtual ICollection<friend> friends { get; set; }
     }
 }

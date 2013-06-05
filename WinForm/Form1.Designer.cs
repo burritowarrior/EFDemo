@@ -46,6 +46,8 @@
             this.testHarnessToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.showTimeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sampleReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.entityFrameworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eFInsertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -88,7 +90,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.fILEToolStripMenuItem,
             this.launchToolStripMenuItem,
-            this.otherToolStripMenuItem});
+            this.otherToolStripMenuItem,
+            this.entityFrameworkToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(499, 24);
@@ -177,23 +180,38 @@
             // testHarnessToolStripMenuItem
             // 
             this.testHarnessToolStripMenuItem.Name = "testHarnessToolStripMenuItem";
-            this.testHarnessToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.testHarnessToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.testHarnessToolStripMenuItem.Text = "Test &Harness";
             this.testHarnessToolStripMenuItem.Click += new System.EventHandler(this.testHarnessToolStripMenuItem_Click);
             // 
             // showTimeToolStripMenuItem
             // 
             this.showTimeToolStripMenuItem.Name = "showTimeToolStripMenuItem";
-            this.showTimeToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.showTimeToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.showTimeToolStripMenuItem.Text = "S&how Time";
             this.showTimeToolStripMenuItem.Click += new System.EventHandler(this.showTimeToolStripMenuItem_Click);
             // 
             // sampleReportToolStripMenuItem
             // 
             this.sampleReportToolStripMenuItem.Name = "sampleReportToolStripMenuItem";
-            this.sampleReportToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sampleReportToolStripMenuItem.Size = new System.Drawing.Size(151, 22);
             this.sampleReportToolStripMenuItem.Text = "Sample &Report";
             this.sampleReportToolStripMenuItem.Click += new System.EventHandler(this.sampleReportToolStripMenuItem_Click);
+            // 
+            // entityFrameworkToolStripMenuItem
+            // 
+            this.entityFrameworkToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eFInsertToolStripMenuItem});
+            this.entityFrameworkToolStripMenuItem.Name = "entityFrameworkToolStripMenuItem";
+            this.entityFrameworkToolStripMenuItem.Size = new System.Drawing.Size(111, 20);
+            this.entityFrameworkToolStripMenuItem.Text = "&Entity Framework";
+            // 
+            // eFInsertToolStripMenuItem
+            // 
+            this.eFInsertToolStripMenuItem.Name = "eFInsertToolStripMenuItem";
+            this.eFInsertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eFInsertToolStripMenuItem.Text = "EF &Insert";
+            this.eFInsertToolStripMenuItem.Click += new System.EventHandler(this.eFInsertToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -231,6 +249,8 @@
         private System.Windows.Forms.ToolStripMenuItem testHarnessToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem showTimeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem sampleReportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem entityFrameworkToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eFInsertToolStripMenuItem;
     }
 }
 

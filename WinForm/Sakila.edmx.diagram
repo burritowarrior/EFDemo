@@ -49,6 +49,9 @@
         <AssociationConnector Association="sakilaModel.fk_rental_staff" ManuallyRouted="false" />
         <AssociationConnector Association="sakilaModel.fk_staff_store" ManuallyRouted="false" />
         <AssociationConnector Association="sakilaModel.fk_store_staff" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="sakilaModel.contact" Width="1.5" PointX="7.2176489062689466" PointY="3.979484738772495" />
+        <EntityTypeShape EntityType="sakilaModel.friend" Width="1.5" PointX="8.2704232205964736" PointY="2.770398767092451" />
+        <AssociationConnector Association="sakilaModel.Friends_Contacts_ContactID" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

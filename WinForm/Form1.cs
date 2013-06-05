@@ -72,5 +72,11 @@ namespace WinForm
             EmployeeReport employeeReport = new EmployeeReport();
             employeeReport.ShowDialog();
         }
+
+        private void eFInsertToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EFModelInsert efModelInsert = new EFModelInsert();
+            efModelInsert.ShowDialog();
+        }
     }
 }

@@ -47,5 +47,7 @@ namespace WinForm
         public DbSet<nicer_but_slower_film_list> nicer_but_slower_film_list { get; set; }
         public DbSet<sales_by_film_category> sales_by_film_category { get; set; }
         public DbSet<staff_list> staff_list { get; set; }
+        public DbSet<contact> contacts { get; set; }
+        public DbSet<friend> friends { get; set; }
     }
 }

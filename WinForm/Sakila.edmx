@@ -4,18 +4,20 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="sakilaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="sakilaModel.Store" Alias="Self" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.6" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityContainer Name="sakilaModelStoreContainer">
           <EntitySet Name="actor" EntityType="sakilaModel.Store.actor" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="address" EntityType="sakilaModel.Store.address" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="category" EntityType="sakilaModel.Store.category" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="city" EntityType="sakilaModel.Store.city" store:Type="Tables" Schema="sakila" />
+          <EntitySet Name="contact" EntityType="sakilaModel.Store.contact" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="country" EntityType="sakilaModel.Store.country" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="customer" EntityType="sakilaModel.Store.customer" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="film" EntityType="sakilaModel.Store.film" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="film_actor" EntityType="sakilaModel.Store.film_actor" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="film_category" EntityType="sakilaModel.Store.film_category" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="film_text" EntityType="sakilaModel.Store.film_text" store:Type="Tables" Schema="sakila" />
+          <EntitySet Name="friends" EntityType="sakilaModel.Store.friends" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="inventory" EntityType="sakilaModel.Store.inventory" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="language" EntityType="sakilaModel.Store.language" store:Type="Tables" Schema="sakila" />
           <EntitySet Name="payment" EntityType="sakilaModel.Store.payment" store:Type="Tables" Schema="sakila" />
@@ -173,6 +175,10 @@
             <End Role="staff" EntitySet="staff" />
             <End Role="store" EntitySet="store" />
           </AssociationSet>
+          <AssociationSet Name="Friends_Contacts_ContactID" Association="sakilaModel.Store.Friends_Contacts_ContactID">
+            <End Role="contact" EntitySet="contact" />
+            <End Role="friends" EntitySet="friends" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="actor">
           <Key>
@@ -212,6 +218,14 @@
           <Property Name="city" Type="varchar" Nullable="false" MaxLength="50" />
           <Property Name="country_id" Type="usmallint" Nullable="false" />
           <Property Name="last_update" Type="timestamp" Nullable="false" StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Name="ContactID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="LastName" Type="varchar" Nullable="false" MaxLength="15" />
         </EntityType>
         <EntityType Name="country">
           <Key>
@@ -278,6 +292,14 @@
           <Property Name="film_id" Type="smallint" Nullable="false" />
           <Property Name="title" Type="varchar" Nullable="false" MaxLength="255" />
           <Property Name="description" Type="text" />
+        </EntityType>
+        <EntityType Name="friends">
+          <Key>
+            <PropertyRef Name="FriendsID" />
+          </Key>
+          <Property Name="FriendsID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ContactID" Type="int" Nullable="false" />
+          <Property Name="FriendlyName" Type="varchar" MaxLength="255" />
         </EntityType>
         <EntityType Name="inventory">
           <Key>
@@ -709,6 +731,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="Friends_Contacts_ContactID">
+          <End Role="contact" Type="sakilaModel.Store.contact" Multiplicity="1" />
+          <End Role="friends" Type="sakilaModel.Store.friends" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contact">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="friends">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Function Name="film_in_stock" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="sakila">
           <Parameter Name="p_film_id" Type="int" Mode="In" />
           <Parameter Name="p_store_id" Type="int" Mode="In" />
@@ -719,16 +753,7 @@
           <Parameter Name="p_store_id" Type="int" Mode="In" />
           <Parameter Name="p_film_count" Type="int" Mode="Out" />
         </Function>
-        <!--Errors Found During Generation:
-      warning 6013: The table/view 'def.sakila.sales_by_store' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
-      
-      <EntityType Name="sales_by_store">
-        <Property Name="store" Type="varchar" MaxLength="101" />
-        <Property Name="manager" Type="varchar" MaxLength="91" />
-        <Property Name="total_sales" Type="decimal" Precision="27" Scale="2" />
-      </EntityType>-->
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="sakilaModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -842,6 +867,12 @@
           <AssociationSet Name="fk_store_staff" Association="sakilaModel.fk_store_staff">
             <End Role="staff" EntitySet="staffs" />
             <End Role="store" EntitySet="stores" />
+          </AssociationSet>
+          <EntitySet Name="contacts" EntityType="sakilaModel.contact" />
+          <EntitySet Name="friends" EntityType="sakilaModel.friend" />
+          <AssociationSet Name="Friends_Contacts_ContactID" Association="sakilaModel.Friends_Contacts_ContactID">
+            <End Role="contact" EntitySet="contacts" />
+            <End Role="friend" EntitySet="friends" />
           </AssociationSet>
         </EntityContainer>
         <EntityType Name="actor">
@@ -1405,6 +1436,36 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <EntityType Name="contact">
+          <Key>
+            <PropertyRef Name="ContactID" />
+          </Key>
+          <Property Type="Int32" Name="ContactID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FirstName" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastName" Nullable="false" MaxLength="15" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="friends" Relationship="sakilaModel.Friends_Contacts_ContactID" FromRole="contact" ToRole="friend" />
+        </EntityType>
+        <EntityType Name="friend">
+          <Key>
+            <PropertyRef Name="FriendsID" />
+          </Key>
+          <Property Type="Int32" Name="FriendsID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="Int32" Name="ContactID" Nullable="false" />
+          <Property Type="String" Name="FriendlyName" MaxLength="255" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="contact" Relationship="sakilaModel.Friends_Contacts_ContactID" FromRole="friend" ToRole="contact" />
+        </EntityType>
+        <Association Name="Friends_Contacts_ContactID">
+          <End Type="sakilaModel.contact" Role="contact" Multiplicity="1" />
+          <End Type="sakilaModel.friend" Role="friend" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="contact">
+              <PropertyRef Name="ContactID" />
+            </Principal>
+            <Dependent Role="friend">
+              <PropertyRef Name="ContactID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -1668,6 +1729,24 @@
                 <ScalarProperty Name="city" ColumnName="city" />
                 <ScalarProperty Name="country" ColumnName="country" />
                 <ScalarProperty Name="SID" ColumnName="SID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="contacts">
+            <EntityTypeMapping TypeName="sakilaModel.contact">
+              <MappingFragment StoreEntitySet="contact">
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="friends">
+            <EntityTypeMapping TypeName="sakilaModel.friend">
+              <MappingFragment StoreEntitySet="friends">
+                <ScalarProperty Name="FriendlyName" ColumnName="FriendlyName" />
+                <ScalarProperty Name="ContactID" ColumnName="ContactID" />
+                <ScalarProperty Name="FriendsID" ColumnName="FriendsID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
