@@ -88,7 +88,7 @@ namespace WinForm
             };
 
             EmployeeViewItem employeeVIewItem = Mapper.Map<Employee, EmployeeViewItem>(employee);
-            Text = "Conversion Success";
+            Text = @"Conversion Success";
         }
 
         private void ConvertNestedObject()
