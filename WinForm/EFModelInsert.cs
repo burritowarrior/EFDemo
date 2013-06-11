@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WinForm
@@ -31,8 +25,8 @@ namespace WinForm
                     FriendlyName = textBox3.Text
                 };
 
-                var anotherFriend = new friend()
-                {
+                var anotherFriend = new friend
+                    {
                     FriendlyName = textBox3.Text + " Jr."
                 };
 
