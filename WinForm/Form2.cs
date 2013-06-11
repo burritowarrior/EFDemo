@@ -115,7 +115,7 @@ namespace WinForm
                              m => m.ResolveUsing<GradeResolver>().FromMember(s => s.Grades));
 
             StudentOverview studentOverview = Mapper.Map<Student, StudentOverview>(student);
-            Text = "Completed!";
+            Text = @"Completed!";
         }
 
         private void buttonGetData_Click(object sender, EventArgs e)
