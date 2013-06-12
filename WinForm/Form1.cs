@@ -78,5 +78,11 @@ namespace WinForm
             EFModelInsert efModelInsert = new EFModelInsert();
             efModelInsert.ShowDialog();
         }
+
+        private void example1ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ExpressionTree expressionTree = new ExpressionTree();
+            expressionTree.ShowDialog();
+        }
     }
 }

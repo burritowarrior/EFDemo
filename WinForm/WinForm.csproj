@@ -106,6 +106,13 @@
     <Compile Include="EmployeeReport.Designer.cs">
       <DependentUpon>EmployeeReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="ExpressionTree.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExpressionTree.Designer.cs">
+      <DependentUpon>ExpressionTree.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExpressionTreeExtensions.cs" />
     <Compile Include="film.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
     </Compile>
@@ -141,6 +148,12 @@
     </Compile>
     <Compile Include="friend.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Inserts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inserts.Designer.cs">
+      <DependentUpon>Inserts.cs</DependentUpon>
     </Compile>
     <Compile Include="inventory.cs">
       <DependentUpon>Sakila.tt</DependentUpon>
@@ -229,6 +242,9 @@
     <EmbeddedResource Include="EmployeeReport.resx">
       <DependentUpon>EmployeeReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ExpressionTree.resx">
+      <DependentUpon>ExpressionTree.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -237,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form3.resx">
       <DependentUpon>Form3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inserts.resx">
+      <DependentUpon>Inserts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm2.resx">
       <DependentUpon>MainForm2.cs</DependentUpon>

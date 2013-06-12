@@ -48,6 +48,8 @@
             this.sampleReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.entityFrameworkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eFInsertToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.expressionTreesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.example1ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -91,7 +93,8 @@
             this.fILEToolStripMenuItem,
             this.launchToolStripMenuItem,
             this.otherToolStripMenuItem,
-            this.entityFrameworkToolStripMenuItem});
+            this.entityFrameworkToolStripMenuItem,
+            this.expressionTreesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(499, 24);
@@ -209,9 +212,24 @@
             // eFInsertToolStripMenuItem
             // 
             this.eFInsertToolStripMenuItem.Name = "eFInsertToolStripMenuItem";
-            this.eFInsertToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.eFInsertToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.eFInsertToolStripMenuItem.Text = "EF &Insert";
             this.eFInsertToolStripMenuItem.Click += new System.EventHandler(this.eFInsertToolStripMenuItem_Click);
+            // 
+            // expressionTreesToolStripMenuItem
+            // 
+            this.expressionTreesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.example1ToolStripMenuItem});
+            this.expressionTreesToolStripMenuItem.Name = "expressionTreesToolStripMenuItem";
+            this.expressionTreesToolStripMenuItem.Size = new System.Drawing.Size(105, 20);
+            this.expressionTreesToolStripMenuItem.Text = "E&xpression Trees";
+            // 
+            // example1ToolStripMenuItem
+            // 
+            this.example1ToolStripMenuItem.Name = "example1ToolStripMenuItem";
+            this.example1ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.example1ToolStripMenuItem.Text = "&Example 1";
+            this.example1ToolStripMenuItem.Click += new System.EventHandler(this.example1ToolStripMenuItem_Click);
             // 
             // Form1
             // 
@@ -251,6 +269,8 @@
         private System.Windows.Forms.ToolStripMenuItem sampleReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem entityFrameworkToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eFInsertToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem expressionTreesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem example1ToolStripMenuItem;
     }
 }
 
