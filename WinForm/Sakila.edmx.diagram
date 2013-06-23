@@ -15,12 +15,12 @@
         <EntityTypeShape EntityType="sakilaModel.film_actor" Width="1.5" PointX="15" PointY="12.25" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.film_category" Width="1.5" PointX="15" PointY="15.25" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.film_text" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="sakilaModel.inventory" Width="1.5" PointX="15" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="sakilaModel.inventory" Width="1.5" PointX="15" PointY="1.375" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.language" Width="1.5" PointX="10.5" PointY="12.25" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.payment" Width="1.5" PointX="12.75" PointY="5.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.rental" Width="1.5" PointX="15.75" PointY="5.625" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.staff" Width="1.5" PointX="10.5" PointY="5.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="sakilaModel.store" Width="1.5" PointX="12.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="sakilaModel.store" Width="1.5" PointX="12.375" PointY="1.25" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.actor_info" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.customer_list" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="sakilaModel.film_list" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />

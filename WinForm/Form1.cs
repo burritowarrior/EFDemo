@@ -12,6 +12,8 @@ namespace WinForm
         {
             InitializeComponent();
             context = new sakilaEntities();
+
+            DoSomething();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -83,6 +85,16 @@ namespace WinForm
         {
             ExpressionTree expressionTree = new ExpressionTree();
             expressionTree.ShowDialog();
+        }
+
+        private void DoSomething()
+        {
+            // var items = context.stores.Select(s => s.store_id == i)
+        }
+
+        private store GetStore()
+        {
+            return context.stores.FirstOrDefault(s => s.store_id == 5015);
         }
     }
 }
